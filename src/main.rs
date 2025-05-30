@@ -33,7 +33,7 @@ fn main() {
             println!("Error, please ensure date format is dd/mm/yyyy");
             continue;
         }
-        println!("Valid date!");
+
         let month_index: usize = month as usize - 1;
         let month_name = MONTH_NAMES[month_index];
 
@@ -50,9 +50,9 @@ fn main() {
 }
 
 fn verify_input(input: String) -> (bool, usize, usize, usize) {
-    const MONTHS: std::ops::Range<usize> = 1..12;
-    const DAYS: std::ops::Range<usize> = 1..31;
-    const YEARS: std::ops::Range<usize> = 1753..2024;
+    const MONTHS: std::ops::Range<usize> = 1..13;
+    const DAYS: std::ops::Range<usize> = 1..32;
+    const YEARS: std::ops::Range<usize> = 1753..2025;
 
     let array: Vec<&str> = input.split("/").collect();
 
